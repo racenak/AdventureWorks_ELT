@@ -1,0 +1,11 @@
+version: "3.8"  # Specify a compatible Docker Compose version
+
+services:
+  # SQL Server service
+  sqlserver:
+    build: 
+      context: .
+      dockerfile: dockerfile
+    shm_size: 128mb
+    ports:
+      - 1433:1433
